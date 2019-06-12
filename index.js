@@ -1,9 +1,7 @@
-const express = require('express');
-const helmet = require('helmet');
-const knex = require('knex');
-const knexConfig = require('./knexfile.js');
+const server = require('./server.js');
 
+const PORT = process.env.PORT || 4000;
 
-
-
-const server = express();
+server.listen(PORT, () => {
+  console.log(`Listening on port ${PORT}...`);
+});
